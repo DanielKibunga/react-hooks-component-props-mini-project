@@ -1,33 +1,17 @@
-// import React from "react";
-// import blogData from "../data/blog";
-
-// console.log(blogData);
-
-// function App() {
-//   return (
-//     <div className="App">
-//       You're on your own from here! Follow the deliverables; test things out in
-//       the browser as you write your code; and good luck!
-//     </div>
-//   );
-// }
-
-// export default App;
+// components/App.js
 import React from "react";
-import blogData from "../data/blog";
 import Header from "./Header";
-import About from "./About";
-import ArticleList from "./ArticleList";
+import Aside from "./Aside"; // Assuming you have an Aside component
+import ArticleList from "./ArticleList"; // Assuming you have ArticleList
 
 function App() {
   return (
-    <div>
-      <Header name={blogData.name} />
-      <About image="images/demo.png" about={blogData.about} />
-      <ArticleList posts={blogData.posts} />
+    <div className="App">
+      <Header name="Underreacted" />
+      <Aside />
+      <ArticleList posts={[]} />
     </div>
   );
 }
 
 export default App;
-
