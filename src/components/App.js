@@ -1,15 +1,21 @@
-// components/App.js
 import React from "react";
-import Header from "./Header";
-import Aside from "./Aside"; // Assuming you have an Aside component
-import ArticleList from "./ArticleList"; // Assuming you have ArticleList
+import blogData from "../data/blog";
+import About from "../components/About";
+import ArticleList from "../components/ArticleList";
+import Header from "../components/Header";
+
+
+console.log(blogData);
 
 function App() {
   return (
     <div className="App">
-      <Header name="Underreacted" />
-      <Aside />
-      <ArticleList posts={[]} />
+      <Header name="My Blog"/>
+      <About 
+         image={blogData.image}
+        about={blogData.about}
+      />
+      <ArticleList posts={blogData.posts}/>
     </div>
   );
 }
